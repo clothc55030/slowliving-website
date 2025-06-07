@@ -7,6 +7,7 @@ export interface Props {
 }
 
 const { title, description = "澎湖慢活角落民宿 - 享受慢活的自在，度假的氣息" } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ const { title, description = "澎湖慢活角落民宿 - 享受慢活的自在�
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href={`${baseUrl}favicon.svg`} />
 		<title>{title}</title>
 		    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +32,7 @@ const { title, description = "澎湖慢活角落民宿 - 享受慢活的自在�
 						<!-- Logo Image with Fallback -->
 						<div class="logo-container">
 							<img 
-								src="/logo.png" 
+								src={`${baseUrl}logo.png`}
 								alt="澎湖慢活角落民宿 Logo" 
 								class="w-16 h-16 object-contain logo-image"
 								onError="this.style.display='none'; this.nextElementSibling.style.display='flex';"
@@ -45,12 +46,12 @@ const { title, description = "澎湖慢活角落民宿 - 享受慢活的自在�
 
 					          <!-- Desktop Navigation -->
           <div class="hidden md:flex space-x-8">
-            <a href="/" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">首頁</a>
-            <a href="/rooms" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">客房介紹</a>
-            <a href="/checkin" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">入住資訊</a>
-            <a href="/news" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">最新消息</a>
-            <a href="/location" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">位置指引</a>
-            <a href="/contact" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">聯絡我們</a>
+            <a href={baseUrl} class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">首頁</a>
+            <a href={`${baseUrl}rooms`} class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">客房介紹</a>
+            <a href={`${baseUrl}checkin`} class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">入住資訊</a>
+            <a href={`${baseUrl}news`} class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">最新消息</a>
+            <a href={`${baseUrl}location`} class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">位置指引</a>
+            <a href={`${baseUrl}contact`} class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">聯絡我們</a>
           </div>
 
 					          <!-- Mobile Menu Button -->
@@ -67,12 +68,12 @@ const { title, description = "澎湖慢活角落民宿 - 享受慢活的自在�
 				        <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
           <div class="flex flex-col space-y-3">
-            <a href="/" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">首頁</a>
-            <a href="/rooms" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">客房介紹</a>
-            <a href="/checkin" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">入住資訊</a>
-            <a href="/news" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">最新消息</a>
-            <a href="/location" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">位置指引</a>
-            <a href="/contact" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">聯絡我們</a>
+            <a href={baseUrl} class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">首頁</a>
+            <a href={`${baseUrl}rooms`} class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">客房介紹</a>
+            <a href={`${baseUrl}checkin`} class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">入住資訊</a>
+            <a href={`${baseUrl}news`} class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">最新消息</a>
+            <a href={`${baseUrl}location`} class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">位置指引</a>
+            <a href={`${baseUrl}contact`} class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">聯絡我們</a>
           </div>
         </div>
 			</nav>
@@ -104,10 +105,10 @@ const { title, description = "澎湖慢活角落民宿 - 享受慢活的自在�
 					<div>
 						<h3 class="text-xl font-bold mb-4">快速連結</h3>
 						            <div class="space-y-2">
-              <a href="/rooms" class="block text-white/80 hover:text-white transition-colors">客房介紹</a>
-              <a href="/checkin" class="block text-white/80 hover:text-white transition-colors">入住資訊</a>
-              <a href="/location" class="block text-white/80 hover:text-white transition-colors">位置指引</a>
-              <a href="/contact" class="block text-white/80 hover:text-white transition-colors">聯絡我們</a>
+              <a href={`${baseUrl}rooms`} class="block text-white/80 hover:text-white transition-colors">客房介紹</a>
+              <a href={`${baseUrl}checkin`} class="block text-white/80 hover:text-white transition-colors">入住資訊</a>
+              <a href={`${baseUrl}location`} class="block text-white/80 hover:text-white transition-colors">位置指引</a>
+              <a href={`${baseUrl}contact`} class="block text-white/80 hover:text-white transition-colors">聯絡我們</a>
               <a href="https://www.facebook.com/profile.php?id=100063754482897" target="_blank" class="block text-white/80 hover:text-white transition-colors">📘 Facebook粉絲團</a>
             </div>
 					</div>

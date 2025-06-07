@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const rooms = [
   {
     id: 'corner-201',
@@ -95,7 +97,7 @@ const rooms = [
             <!-- Room Image -->
             <div class="h-64 relative overflow-hidden">
               <img 
-                src={room.image} 
+                src={`${baseUrl}${room.image.substring(1)}`}
                 alt={room.name}
                 class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                 loading="lazy"
@@ -142,7 +144,7 @@ const rooms = [
 
               <!-- CTA Button -->
               <div class="pt-4 border-t border-gray-200">
-                <a href="/contact" 
+                <a href={`${baseUrl}contact`} 
                    class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block">
                   立即預訂
                 </a>
@@ -244,7 +246,7 @@ const rooms = [
       <p class="text-xl mb-8 max-w-2xl mx-auto">
         每個房間都精心設計，為您提供最舒適的住宿體驗
       </p>
-      <a href="/contact" 
+      <a href={`${baseUrl}contact`} 
          class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
         立即預訂
       </a>

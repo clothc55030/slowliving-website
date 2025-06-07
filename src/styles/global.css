@@ -251,7 +251,7 @@ body {
     var(--primary-600) 25%, 
     var(--primary-700) 75%, 
     var(--primary-800) 100%);
-  background-image: url('/hero-bg.jpg');
+  background-image: url('./hero-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

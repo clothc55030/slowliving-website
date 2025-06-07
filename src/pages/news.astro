@@ -1,35 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title="最新消息 - 澎湖慢活．角落民宿">
-  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+  <section class="gradient-luxury text-white py-16 texture-bg-dark">
     <div class="container mx-auto px-4 text-center">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">最新消息</h1>
-      <p class="text-xl">掌握民宿最新資訊與優惠活動</p>
+      <p class="text-xl">民宿最新資訊與貼心服務</p>
     </div>
   </section>
 
-  <section class="py-16">
+  <section class="py-16 section-bg-1 texture-bg">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">服務資訊</h2>
+          <div class="w-24 divider-luxury mx-auto"></div>
+        </div>
+        
         <div class="space-y-8">
-          <article class="bg-white p-8 rounded-xl shadow-lg">
-            <div class="flex items-center text-sm text-gray-500 mb-4">
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 4V9a2 2 0 012-2h4a2 2 0 012 2v2M5 21h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-              2025年12月
-            </div>
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">包棟優惠活動進行中！</h2>
-            <p class="text-gray-600 mb-4">
-              為了提供更好的住宿體驗，我們推出包棟優惠方案！適合大家庭或團體出遊，享受整棟民宿的私人空間。
-            </p>
-            <p class="text-blue-600 font-semibold">
-              詳情請來電洽詢：0988-089913
-            </p>
-          </article>
-
           <article class="bg-white p-8 rounded-xl shadow-lg">
             <div class="flex items-center text-sm text-gray-500 mb-4">
               <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -71,7 +62,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">想了解更多資訊？</h2>
       <p class="text-xl mb-8">歡迎隨時與我們聯繫</p>
-      <a href="/contact" 
+      <a href={`${baseUrl}contact`}
          class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
         聯絡我們
       </a>

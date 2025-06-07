@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -18,11 +20,11 @@ import Layout from '../layouts/Layout.astro';
 					望著無垠的大海，享受著慢活得自在，這就是度假的氣息....
 				</p>
 				        <div class="flex flex-col md:flex-row gap-4 justify-center">
-          <a href="/rooms" 
+          <a href={`${baseUrl}rooms`}
              class="btn-luxury-outline">
             客房介紹
           </a>
-          <a href="/contact" 
+          <a href={`${baseUrl}contact`}
              class="btn-luxury-outline">
             立即預訂
           </a>
@@ -58,7 +60,7 @@ import Layout from '../layouts/Layout.astro';
               <!-- Logo Image with Fallback -->
               <div class="about-logo-container mx-auto mb-4">
                 <img 
-                  src="/logo.png" 
+                  src={`${baseUrl}logo.png`}
                   alt="澎湖慢活角落民宿 Logo" 
                   class="w-20 h-20 object-contain about-logo-image mx-auto"
                   onError="this.style.display='none'; this.nextElementSibling.style.display='flex';"
@@ -173,11 +175,11 @@ import Layout from '../layouts/Layout.astro';
 				立即預訂您的澎湖慢活角落之旅，體驗最純粹的度假時光
 			</p>
 			<div class="flex flex-col md:flex-row gap-4 justify-center">
-				<a href="/rooms" 
+				<a href={`${baseUrl}rooms`}
 				   class="btn-luxury-outline">
 					查看客房
 				</a>
-				<a href="/contact" 
+				<a href={`${baseUrl}contact`}
 				   class="btn-luxury-outline">
 					立即預訂
 				</a>
