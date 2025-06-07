@@ -7,7 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   // GitHub Pages部署配置
   site: 'https://clothc55030.github.io',
-  base: '/slowliving-website',
+  // 暫時註解掉base路徑來測試
+  // base: '/slowliving-website',
   output: 'static',
   vite: {
     plugins: [tailwindcss()]
