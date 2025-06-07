@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 
 const baseUrl = import.meta.env.BASE_URL;
+// 確保 baseUrl 以 / 結尾，用於正確的路徑拼接
+const basePath = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -20,11 +22,11 @@ const baseUrl = import.meta.env.BASE_URL;
 					望著無垠的大海，享受著慢活得自在，這就是度假的氣息....
 				</p>
 				        <div class="flex flex-col md:flex-row gap-4 justify-center">
-          <a href={`${baseUrl}rooms`}
+          <a href={`${basePath}rooms`}
              class="btn-luxury-outline">
             客房介紹
           </a>
-          <a href={`${baseUrl}contact`}
+          <a href={`${basePath}contact`}
              class="btn-luxury-outline">
             立即預訂
           </a>
@@ -60,7 +62,7 @@ const baseUrl = import.meta.env.BASE_URL;
               <!-- Logo Image with Fallback -->
               <div class="about-logo-container mx-auto mb-4">
                 <img 
-                  src={`${baseUrl}logo.png`}
+                  src={`${basePath}logo.png`}
                   alt="澎湖慢活角落民宿 Logo" 
                   class="w-20 h-20 object-contain about-logo-image mx-auto"
                   onError="this.style.display='none'; this.nextElementSibling.style.display='flex';"
@@ -175,11 +177,11 @@ const baseUrl = import.meta.env.BASE_URL;
 				立即預訂您的澎湖慢活角落之旅，體驗最純粹的度假時光
 			</p>
 			<div class="flex flex-col md:flex-row gap-4 justify-center">
-				<a href={`${baseUrl}rooms`}
+				<a href={`${basePath}rooms`}
 				   class="btn-luxury-outline">
 					查看客房
 				</a>
-				<a href={`${baseUrl}contact`}
+				<a href={`${basePath}contact`}
 				   class="btn-luxury-outline">
 					立即預訂
 				</a>
