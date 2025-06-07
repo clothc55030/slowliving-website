@@ -1,0 +1,320 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="入住資訊 - 澎湖慢活．角落民宿">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">入住資訊</h1>
+      <p class="text-xl">預訂流程、入住須知及相關注意事項</p>
+    </div>
+  </section>
+
+  <!-- Check-in Info Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Check-in/out Times -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h2 class="text-2xl font-bold text-gray-800">入退房時間</h2>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="border border-green-200 bg-green-50 p-4 rounded-lg">
+                <h3 class="text-lg font-semibold text-green-800 mb-2">入住時間</h3>
+                <p class="text-2xl font-bold text-green-600">16:00 以後</p>
+              </div>
+              
+              <div class="border border-orange-200 bg-orange-50 p-4 rounded-lg">
+                <h3 class="text-lg font-semibold text-orange-800 mb-2">退房時間</h3>
+                <p class="text-2xl font-bold text-orange-600">11:00 以前</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekday Definition -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 4V9a2 2 0 012-2h4a2 2 0 012 2v2M5 21h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h2 class="text-2xl font-bold text-gray-800">平假日定義</h2>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                <div>
+                  <span class="font-semibold text-gray-800">平日：</span>
+                  <span class="text-gray-600">星期日至星期四</span>
+                </div>
+              </div>
+              
+              <div class="flex items-center">
+                <div class="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                <div>
+                  <span class="font-semibold text-gray-800">假日：</span>
+                  <span class="text-gray-600">星期五至星期六、國定假日及連續假日</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accommodation Rules -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800">住宿須知</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+
+        <div class="grid gap-6">
+          <div class="bg-white p-6 rounded-xl shadow-md flex items-start">
+            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
+              <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800 mb-2">加床服務</h3>
+              <p class="text-gray-600">提供加床服務不另提供床墊，依房間內的沙發床為主。加床服務500元/人(提供備品及早餐)。</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md flex items-start">
+            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+              <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800 mb-2">精緻早餐</h3>
+              <p class="text-gray-600">住宿均附精緻早餐。</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md flex items-start">
+            <div class="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center mr-4 mt-1">
+              <svg class="w-4 h-4 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800 mb-2">禁止事項</h3>
+              <p class="text-gray-600">禁止攜帶寵物。室內全面禁止酒、吸煙、嚼檳榔。</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md flex items-start">
+            <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center mr-4 mt-1">
+              <svg class="w-4 h-4 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.268 18.5c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800 mb-2">安全提醒</h3>
+              <p class="text-gray-600">個人貴重物品請隨身攜帶並妥善保管，如有遺失恕不負責。入住時請出示身分證件以供登記，並請繳清餘款。</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md flex items-start">
+            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1">
+              <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-800 mb-2">安寧時間</h3>
+              <p class="text-gray-600">晚間10:00過後請降低音量，勿大聲喧嘩，以維護社區安寧及其他旅客權益。請依房型人數進住，如需加人，請事先告知。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banking Info -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800">匯款資訊</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Bank Details -->
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-xl">
+            <div class="flex items-center mb-6">
+              <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0V17m0-1.5c-1.11 0-2.08-.402-2.599-1"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-800">銀行帳戶資訊</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="font-semibold text-gray-700">銀行名稱:</span>
+                <span class="text-gray-800">台灣銀行</span>
+              </div>
+              
+              <div class="flex justify-between items-center">
+                <span class="font-semibold text-gray-700">銀行代碼:</span>
+                <span class="text-gray-800 font-mono text-lg">004</span>
+              </div>
+              
+              <div class="flex justify-between items-center">
+                <span class="font-semibold text-gray-700">帳號:</span>
+                <span class="text-gray-800 font-mono text-lg">024004371452</span>
+              </div>
+              
+              <div class="flex justify-between items-center">
+                <span class="font-semibold text-gray-700">戶名:</span>
+                <span class="text-gray-800">李怡潔</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking Process -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">預訂流程</h3>
+            
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">1</div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">電話確認</h4>
+                  <p class="text-gray-600 text-sm">請事先來電確認或預約</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">2</div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">支付訂金</h4>
+                  <p class="text-gray-600 text-sm">請於訂房後3日內預付訂金(房價的30%)</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">3</div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">匯款通知</h4>
+                  <p class="text-gray-600 text-sm">匯款後請務必來電告知帳號後五碼</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mr-4 text-sm font-bold">4</div>
+                <div>
+                  <h4 class="font-semibold text-gray-800">確認保留</h4>
+                  <p class="text-gray-600 text-sm">收到訂金後將為您保留房間，餘款到付</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Important Notice -->
+        <div class="mt-12 bg-yellow-50 border border-yellow-200 p-6 rounded-xl">
+          <div class="flex items-start">
+            <div class="w-6 h-6 text-yellow-600 mr-3 mt-1">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.464 0L4.268 18.5c-.77.833.192 2.5 1.732 2.5z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold text-yellow-800 mb-2">重要提醒</h4>
+              <ul class="text-yellow-700 text-sm space-y-1 list-disc list-inside">
+                <li>訂房時間：早上10:00至晚上10:00</li>
+                <li>匯款後請務必來電確認【電話：0988-089913】</li>
+                <li>若於保留時間內未收到匯款訂金則將取消訂房，並且不另行通知</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cancellation Policy -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800">改期退訂政策</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div>
+              <div class="flex items-center mb-4">
+                <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-4 h-4 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 4V9a2 2 0 012-2h4a2 2 0 012 2v2M5 21h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800">一般改期</h3>
+              </div>
+              <p class="text-gray-600 text-sm">
+                匯款後若因故欲更改日期，請於7日前通知，可保留房間三個月，否則訂金沒收、恕不另行通知。
+              </p>
+            </div>
+
+            <div>
+              <div class="flex items-center mb-4">
+                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-gray-800">天災因素</h3>
+              </div>
+              <p class="text-gray-600 text-sm">
+                如遇颱風、地震等天災，交通因中斷，經當地縣政府或旅客所在地政府發佈停止上班上課，方可退還訂金或保留訂金三個月並擇期入住。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">準備預訂您的澎湖假期？</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        如有任何疑問或需要進一步洽詢，歡迎隨時與我們聯繫
+      </p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="tel:0988089913" 
+           class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          立即致電：0988-089913
+        </a>
+        <a href="/contact" 
+           class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+          聯絡我們
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout> 

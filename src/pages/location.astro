@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="位置指引 - 澎湖慢活．角落民宿">
+  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">位置指引</h1>
+      <p class="text-xl">交通便利，距離各大景點都很近</p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <!-- Google Maps -->
+        <div class="bg-white rounded-xl shadow-luxury overflow-hidden mb-12">
+          <div class="relative">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.2826491582!2d119.58253641498!3d23.583914384669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346c5ae040000001%3A0xe45ddac7c02644d8!2z5oWi5rS755Sp6JaP6JC95rCR5a6_!5e0!3m2!1szh-TW!2stw!4v1733572800000!5m2!1szh-TW!2stw"
+              width="100%" 
+              height="400" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-96"
+              title="澎湖慢活角落民宿位置地圖">
+            </iframe>
+            
+            <!-- Map Overlay Info -->
+            <div class="absolute bottom-4 left-4 right-4">
+              <div class="glass-effect rounded-lg p-4">
+                <h3 class="text-lg font-bold text-neutral-800 mb-1">澎湖慢活．角落民宿</h3>
+                <p class="text-sm text-neutral-600 mb-2">
+                  <a href="https://www.google.com/maps/place/%E6%85%A2%E6%B4%BB%E8%A7%92%E8%90%BD%E6%B0%91%E5%AE%BF/@23.5839143,119.5825364,17z/data=!3m1!4b1!4m9!3m8!1s0x346c5ae040000001:0xe45ddac7c02644d8!5m2!4m1!1i2!8m2!3d23.5839143!4d119.5825364!16s%2Fg%2F11c72k5rh8?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" 
+                     target="_blank" 
+                     class="text-primary-600 hover:text-primary-800 transition-colors underline">
+                    澎湖縣馬公市西衛里223之2
+                  </a>
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-neutral-500">📍 GPS: 23.5839143, 119.5825364</span>
+                  <a href="https://www.google.com/maps/dir//澎湖慢活角落民宿/@23.5839143,119.5825364,17z" 
+                     target="_blank"
+                     class="btn-luxury-outline-light text-xs px-3 py-1">
+                    取得路線
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">地址資訊</h2>
+            <div class="space-y-3">
+                              <p class="text-gray-600"><strong>地址：</strong><a href="https://www.google.com/maps/place/%E6%85%A2%E6%B4%BB%E8%A7%92%E8%90%BD%E6%B0%91%E5%AE%BF/@23.5839143,119.5825364,17z/data=!3m1!4b1!4m9!3m8!1s0x346c5ae040000001:0xe45ddac7c02644d8!5m2!4m1!1i2!8m2!3d23.5839143!4d119.5825364!16s%2Fg%2F11c72k5rh8?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-primary-600 hover:text-primary-800 transition-colors underline">澎湖縣馬公市西衛里223之2</a></p>
+              <p class="text-gray-600"><strong>GPS座標：</strong>E 119°34'57.1" N 23°35'2.02"</p>
+              <p class="text-gray-600"><strong>合法民宿編號：</strong>NO.446</p>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">交通指南</h2>
+            <ul class="space-y-2 text-gray-600">
+              <li>🛫 距離馬公航空站約15分鐘車程</li>
+              <li>🏛️ 鄰近澎湖天后宮</li>
+              <li>🌊 鄰近觀音亭海濱公園</li>
+              <li>🎨 鄰近東衛石雕公園</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout> 

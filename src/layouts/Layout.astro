@@ -1,22 +1,149 @@
-<!doctype html>
-<html lang="en">
+---
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "澎湖慢活角落民宿 - 享受慢活的自在，度假的氣息" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-TW">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
+		    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<slot />
+	  <body class="font-sans text-neutral-800">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 nav-luxury">
+			<nav class="container mx-auto px-4 py-4">
+				<div class="flex justify-between items-center">
+					<!-- Logo -->
+					<div class="flex items-center">
+						<!-- Logo Image with Fallback -->
+						<div class="logo-container">
+							<img 
+								src="/logo.png" 
+								alt="澎湖慢活角落民宿 Logo" 
+								class="w-16 h-16 object-contain logo-image"
+								onError="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+							/>
+							<!-- Fallback Logo -->
+							<div class="w-32 h-32 gradient-luxury rounded-full flex items-center justify-center shadow-luxury logo-fallback">
+								<span class="text-white font-bold text-4xl">慢</span>
+							</div>
+						</div>
+					</div>
+
+					          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-8">
+            <a href="/" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">首頁</a>
+            <a href="/rooms" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">客房介紹</a>
+            <a href="/checkin" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">入住資訊</a>
+            <a href="/news" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">最新消息</a>
+            <a href="/location" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">位置指引</a>
+            <a href="/contact" class="text-neutral-700 hover:text-primary-600 transition-colors font-medium">聯絡我們</a>
+          </div>
+
+					          <!-- Mobile Menu Button -->
+          <button 
+            id="mobile-menu-button"
+            class="md:hidden text-neutral-700 hover:text-primary-600"
+          >
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+						</svg>
+					</button>
+				</div>
+
+				        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <div class="flex flex-col space-y-3">
+            <a href="/" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">首頁</a>
+            <a href="/rooms" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">客房介紹</a>
+            <a href="/checkin" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">入住資訊</a>
+            <a href="/news" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">最新消息</a>
+            <a href="/location" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">位置指引</a>
+            <a href="/contact" class="text-neutral-700 hover:text-primary-600 transition-colors py-2 font-medium">聯絡我們</a>
+          </div>
+        </div>
+			</nav>
+		</header>
+
+		<!-- Main Content -->
+		<main>
+			<slot />
+		</main>
+
+		    <!-- Footer -->
+    <footer class="gradient-luxury text-white texture-bg-dark">
+			<div class="container mx-auto px-4 py-12">
+				<div class="grid md:grid-cols-3 gap-8">
+					<!-- Contact Info -->
+					<div>
+						<h3 class="text-xl font-bold mb-4">聯絡資訊</h3>
+						            <div class="space-y-2 text-white/80">
+							<p>📍 <a href="https://www.google.com/maps/place/%E6%85%A2%E6%B4%BB%E8%A7%92%E8%90%BD%E6%B0%91%E5%AE%BF/@23.5839143,119.5825364,17z/data=!3m1!4b1!4m9!3m8!1s0x346c5ae040000001:0xe45ddac7c02644d8!5m2!4m1!1i2!8m2!3d23.5839143!4d119.5825364!16s%2Fg%2F11c72k5rh8?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="text-white/80 hover:text-white transition-colors underline">澎湖縣馬公市西衛里223之2</a></p>
+							<p>📞 0988-089913</p>
+							<p>☎️ 06-9269509</p>
+							<p>✉️ f100.adali@gmail.com</p>
+							<p>LINE ID: corner913</p>
+							<p>📘 <a href="https://www.facebook.com/profile.php?id=100063754482897" target="_blank" class="text-white/80 hover:text-white transition-colors underline">Facebook粉絲團</a></p>
+						</div>
+					</div>
+
+					<!-- Quick Links -->
+					<div>
+						<h3 class="text-xl font-bold mb-4">快速連結</h3>
+						            <div class="space-y-2">
+              <a href="/rooms" class="block text-white/80 hover:text-white transition-colors">客房介紹</a>
+              <a href="/checkin" class="block text-white/80 hover:text-white transition-colors">入住資訊</a>
+              <a href="/location" class="block text-white/80 hover:text-white transition-colors">位置指引</a>
+              <a href="/contact" class="block text-white/80 hover:text-white transition-colors">聯絡我們</a>
+              <a href="https://www.facebook.com/profile.php?id=100063754482897" target="_blank" class="block text-white/80 hover:text-white transition-colors">📘 Facebook粉絲團</a>
+            </div>
+					</div>
+
+					<!-- About -->
+					<div>
+						<h3 class="text-xl font-bold mb-4">關於我們</h3>
+						            <p class="text-white/80 text-sm leading-relaxed">
+              望著無垠的大海，享受著慢活得自在，這就是度假的氣息。澎湖慢活角落民宿提供您最舒適的住宿體驗。
+            </p>
+            <div class="mt-4">
+              <p class="text-sm text-white/60">澎湖縣合法民宿編號 NO.446</p>
+            </div>
+					</div>
+				</div>
+
+				        <div class="border-t border-white/20 mt-8 pt-8 text-center">
+          <p class="text-white/60">&copy; 2025 澎湖慢活．角落民宿 版權所有</p>
+        </div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			const mobileMenuButton = document.getElementById('mobile-menu-button');
+			const mobileMenu = document.getElementById('mobile-menu');
+
+			mobileMenuButton?.addEventListener('click', () => {
+				mobileMenu?.classList.toggle('hidden');
+			});
+		</script>
 	</body>
 </html>
 
 <style>
-	html,
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		font-family: 'Noto Sans TC', sans-serif;
 	}
 </style>

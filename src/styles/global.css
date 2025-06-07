@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+/* 自訂變數 */
+:root {
+  --primary-50: #f7f9fc;
+  --primary-100: #eef3f8;
+  --primary-200: #dde7f0;
+  --primary-300: #c2d4e6;
+  --primary-400: #a1bed9;
+  --primary-500: #7fa7cc;
+  --primary-600: #6192bf; /* RAL 240 70 20 基準色 */
+  --primary-700: #4f7ba8;
+  --primary-800: #2d4a6b;
+  --primary-900: #1e3347;
+  
+  --accent-50: #fefdf8;
+  --accent-100: #fefaeb;
+  --accent-200: #fef3c7;
+  --accent-300: #fde68a;
+  --accent-400: #fbbf24;
+  --accent-500: #f59e0b;
+  --accent-600: #d97706;
+  --accent-700: #b45309;
+  --accent-800: #92400e;
+  --accent-900: #78350f;
+  
+  --neutral-50: #fafaf9;
+  --neutral-100: #f5f5f4;
+  --neutral-200: #e7e5e4;
+  --neutral-300: #d6d3d1;
+  --neutral-400: #a8a29e;
+  --neutral-500: #78716c;
+  --neutral-600: #57534e;
+  --neutral-700: #44403c;
+  --neutral-800: #292524;
+  --neutral-900: #1c1917;
+}
+
+/* 全域樣式 */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--neutral-800);
+  line-height: 1.7;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background-attachment: fixed;
+}
+
+/* 紋理背景 */
+.texture-bg {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.texture-bg-dark {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-size: 30px 30px;
+}
+
+/* 高級漸層 */
+.gradient-luxury {
+  background: linear-gradient(135deg, 
+    var(--primary-500) 0%, 
+    var(--primary-600) 25%, 
+    var(--primary-700) 75%, 
+    var(--primary-800) 100%);
+}
+
+.gradient-luxury-light {
+  background: linear-gradient(135deg, 
+    var(--primary-50) 0%, 
+    var(--primary-100) 50%, 
+    var(--primary-200) 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, 
+    var(--accent-400) 0%, 
+    var(--accent-500) 50%, 
+    var(--accent-600) 100%);
+}
+
+/* 玻璃效果 */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-effect-dark {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* 優雅陰影 */
+.shadow-luxury {
+  box-shadow: 
+    0 10px 25px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-luxury-lg {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* 按鈕樣式 */
+.btn-luxury {
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-600));
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px 0 rgba(97, 146, 191, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-luxury::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-luxury:hover::before {
+  left: 100%;
+}
+
+.btn-luxury:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(97, 146, 191, 0.4);
+}
+
+.btn-luxury-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-luxury-outline:hover {
+  background: white;
+  color: var(--primary-600);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-luxury-outline-light {
+  background: transparent;
+  color: var(--primary-600);
+  border: 2px solid var(--primary-600);
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-luxury-outline-light:hover {
+  background: var(--primary-600);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(97, 146, 191, 0.3);
+}
+
+/* 卡片樣式 */
+.card-luxury {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: all 0.3s ease;
+}
+
+.card-luxury:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px 0 rgba(31, 38, 135, 0.2);
+}
+
+/* 漸層文字 */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 裝飾線條 */
+.divider-luxury {
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--accent-400) 50%, 
+    transparent 100%);
+  border-radius: 1px;
+}
+
+/* 導航列優化 */
+.nav-luxury {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* 頁面區塊背景 */
+.section-bg-1 {
+  background: linear-gradient(135deg, #fafafa 0%, #f0f4f8 100%);
+}
+
+.section-bg-2 {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+/* 動畫效果 */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* 英雄區塊背景 */
+.hero-background {
+  background: linear-gradient(135deg, 
+    var(--primary-500) 0%, 
+    var(--primary-600) 25%, 
+    var(--primary-700) 75%, 
+    var(--primary-800) 100%);
+  background-image: url('/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+/* Logo 樣式 */
+.logo-container {
+  position: relative;
+}
+
+.logo-image {
+  display: block;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  width: 8rem;
+  height: 8rem;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.logo-fallback {
+  display: none;
+}
+
+/* About Section Logo */
+.about-logo-container {
+  position: relative;
+}
+
+.about-logo-image {
+  display: block;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.about-logo-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.about-logo-fallback {
+  display: none;
+}
+
+/* 響應式調整 */
+@media (max-width: 768px) {
+  .btn-luxury, .btn-luxury-outline {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .card-luxury {
+    border-radius: 0.75rem;
+  }
+  
+  .logo-image {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .logo-fallback {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .logo-fallback span {
+    font-size: 2rem;
+  }
+}

@@ -1,11 +1,192 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="澎湖慢活．角落民宿 - 首頁">
+	  <!-- Hero Section -->
+  <section class="relative text-white hero-background">
+		<div class="absolute inset-0 bg-black opacity-50"></div>
+		<div class="relative container mx-auto px-4 py-24 md:py-32 flex items-center justify-center min-h-screen">
+			<div class="max-w-4xl mx-auto text-center">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6">
+					澎湖慢活．角落民宿
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 leading-relaxed">
+					望著無垠的大海，享受著慢活得自在，這就是度假的氣息....
+				</p>
+				        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a href="/rooms" 
+             class="btn-luxury-outline">
+            客房介紹
+          </a>
+          <a href="/contact" 
+             class="btn-luxury-outline">
+            立即預訂
+          </a>
+        </div>
+			</div>
+		</div>
+	</section>
+
+	  <!-- About Section -->
+  <section class="py-16 md:py-24 section-bg-1 texture-bg">
+		<div class="container mx-auto px-4">
+			<div class="max-w-4xl mx-auto">
+				        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">關於我們</h2>
+          <div class="w-24 divider-luxury mx-auto"></div>
+        </div>
+				
+				<div class="grid md:grid-cols-2 gap-12 items-center">
+					          <div class="space-y-6">
+            <p class="text-lg leading-relaxed text-neutral-700">
+							白雲如棉花糖般輕柔飄浮在澄澈藍天，海浪輕拍沙灘，奏出悠然和煦的節奏，帶著海鹽香氣的微風拂過髮梢，望向無垠湛藍的海面，不自覺地，嘴角上揚——這，正是度假的味道，慢活的節奏。
+						</p>
+						            <p class="text-lg leading-relaxed text-neutral-700">
+              「慢活．角落民宿」座落於澎湖馬公市，鄰近觀音亭海濱公園、澎湖天后宮、東衛石雕公園等知名景點，距離馬公航空站車程僅約15分鐘，交通便捷，鬧中取靜，是您造訪澎湖、探索離島魅力的理想落腳處。
+            </p>
+            <p class="text-lg leading-relaxed text-neutral-700">
+              民宿外觀時尚新穎，一踏入大廳，便能感受到獨具品味的氛圍。空間設計揉合微復古工業風與現代簡約美學，捨棄粗獷與喧囂，取而代之的是精緻、靜謐與優雅。每一處角落皆蘊含藝文氣息，讓旅人在輕鬆自在中，感受細膩生活的溫度。「慢活．角落民宿」不僅是一處休憩之所，更是引領您沉浸於度假風情、重新找回生活步調的專屬角落。
+            </p>
+					</div>
+					
+					          <div class="card-luxury p-8 float-animation">
+            <div class="text-center">
+              <!-- Logo Image with Fallback -->
+              <div class="about-logo-container mx-auto mb-4">
+                <img 
+                  src="/logo.png" 
+                  alt="澎湖慢活角落民宿 Logo" 
+                  class="w-20 h-20 object-contain about-logo-image mx-auto"
+                  onError="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <!-- Fallback Logo -->
+                <div class="w-20 h-20 gradient-luxury rounded-full flex items-center justify-center mx-auto shadow-luxury about-logo-fallback">
+                  <span class="text-white text-2xl font-bold">慢</span>
+                </div>
+              </div>
+              
+              <p class="text-neutral-600">
+                不僅僅只是提供旅人一處安居休憩的旅居空間，更要帶給您不同凡響的度假閒情。
+              </p>
+            </div>
+          </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	  <!-- Facilities Section -->
+  <section class="py-16 section-bg-2">
+		<div class="container mx-auto px-4">
+			<div class="max-w-6xl mx-auto">
+				        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 gradient-text">民宿設施</h2>
+          <div class="w-24 divider-luxury mx-auto"></div>
+        </div>
+				
+				        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div class="card-luxury p-6 text-center">
+						<div class="w-12 h-12 gradient-luxury-light rounded-lg flex items-center justify-center mx-auto mb-4 shadow-luxury">
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+							</svg>
+						</div>
+						<h3 class="font-semibold text-neutral-800">電梯</h3>
+					</div>
+					
+					<div class="card-luxury p-6 text-center">
+						<div class="w-12 h-12 gradient-luxury-light rounded-lg flex items-center justify-center mx-auto mb-4 shadow-luxury">
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+							</svg>
+						</div>
+						<h3 class="font-semibold text-neutral-800">無障礙空間</h3>
+					</div>
+					
+					<div class="card-luxury p-6 text-center">
+						<div class="w-12 h-12 gradient-luxury-light rounded-lg flex items-center justify-center mx-auto mb-4 shadow-luxury">
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+							</svg>
+						</div>
+						<h3 class="font-semibold text-neutral-800">電冰箱</h3>
+					</div>
+					
+					<div class="card-luxury p-6 text-center">
+						<div class="w-12 h-12 gradient-luxury-light rounded-lg flex items-center justify-center mx-auto mb-4 shadow-luxury">
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"></path>
+							</svg>
+						</div>
+						<h3 class="font-semibold text-neutral-800">空調設施</h3>
+					</div>
+					
+					<div class="card-luxury p-6 text-center">
+						<div class="w-12 h-12 gradient-luxury-light rounded-lg flex items-center justify-center mx-auto mb-4 shadow-luxury">
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.586a1 1 0 01.707.293l2.414 2.414a1 1 0 00.707.293H15M9 10v4a2 2 0 002 2h2a2 2 0 002-2v-4M9 10V9a2 2 0 012-2h2a2 2 0 012 2v1"></path>
+							</svg>
+						</div>
+						<h3 class="font-semibold text-neutral-800">兒童遊戲床</h3>
+					</div>
+					
+					<div class="card-luxury p-6 text-center">
+						<div class="w-12 h-12 gradient-luxury-light rounded-lg flex items-center justify-center mx-auto mb-4 shadow-luxury">
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+							</svg>
+						</div>
+						<h3 class="font-semibold text-neutral-800">奶瓶消毒鍋</h3>
+					</div>
+					
+					<div class="card-luxury p-6 text-center">
+						<div class="w-12 h-12 gradient-luxury-light rounded-lg flex items-center justify-center mx-auto mb-4 shadow-luxury">
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a2 2 0 012-2h4a2 2 0 012 2v4m-6 4V9a2 2 0 012-2h4a2 2 0 012 2v2M5 21h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+							</svg>
+						</div>
+						<h3 class="font-semibold text-neutral-800">嬰兒澡盆</h3>
+					</div>
+					
+					<div class="card-luxury p-6 text-center">
+						<div class="w-12 h-12 gradient-luxury-light rounded-lg flex items-center justify-center mx-auto mb-4 shadow-luxury">
+							<svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+							</svg>
+						</div>
+						<h3 class="font-semibold text-neutral-800">無線網路</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 gradient-luxury text-white texture-bg-dark">
+		<div class="container mx-auto px-4 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">準備好享受慢活的假期了嗎？</h2>
+			<p class="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+				立即預訂您的澎湖慢活角落之旅，體驗最純粹的度假時光
+			</p>
+			<div class="flex flex-col md:flex-row gap-4 justify-center">
+				<a href="/rooms" 
+				   class="btn-luxury-outline">
+					查看客房
+				</a>
+				<a href="/contact" 
+				   class="btn-luxury-outline">
+					立即預訂
+				</a>
+				<a href="https://www.facebook.com/profile.php?id=100063754482897" 
+				   target="_blank"
+				   class="btn-luxury-outline">
+					📘 Facebook粉絲團
+				</a>
+			</div>
+		</div>
+	</section>
 </Layout>

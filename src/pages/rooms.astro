@@ -1,0 +1,253 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const rooms = [
+  {
+    id: 'corner-201',
+    name: '角落．201二人房',
+    type: '二人房',
+    capacity: 2,
+    image: '/rooms/corner-201.jpg',
+    features: ['舒適雙人床', '獨立衛浴', '空調設備', '免費WiFi', '盥洗用品'],
+    description: '舒適溫馨的二人房，適合情侶或夫妻入住。'
+  },
+  {
+    id: 'corner-202',
+    name: '角落．202四人房',
+    type: '四人房',
+    capacity: 4,
+    image: '/rooms/corner-202.jpg',
+    features: ['雙人床 + 沙發床', '獨立衛浴', '空調設備', '免費WiFi', '盥洗用品'],
+    description: '寬敞的四人房，適合家庭或朋友一起入住。'
+  },
+  {
+    id: 'corner-301',
+    name: '角落．301二人房',
+    type: '二人房',
+    capacity: 2,
+    image: '/rooms/corner-301.jpg',
+    features: ['舒適雙人床', '獨立衛浴', '空調設備', '免費WiFi', '盥洗用品'],
+    description: '位於三樓的舒適二人房，享有更佳的視野。'
+  },
+  {
+    id: 'corner-302',
+    name: '角落．302四人房',
+    type: '四人房',
+    capacity: 4,
+    image: '/rooms/corner-302.jpg',
+    features: ['雙人床 + 沙發床', '獨立衛浴', '空調設備', '免費WiFi', '盥洗用品'],
+    description: '三樓四人房，空間寬敞，設備完善。'
+  },
+  {
+    id: 'corner-401',
+    name: '角落．401二人房',
+    type: '二人房',
+    capacity: 2,
+    image: '/rooms/corner-401.jpg',
+    features: ['舒適雙人床', '獨立衛浴', '空調設備', '免費WiFi', '盥洗用品'],
+    description: '頂樓二人房，享有最佳的景觀視野。'
+  },
+  {
+    id: 'slowlife-201',
+    name: '慢活．201二人房',
+    type: '二人房',
+    capacity: 2,
+    image: '/rooms/slowlife-201.jpg',
+    features: ['舒適雙人床', '獨立衛浴', '空調設備', '免費WiFi', '盥洗用品'],
+    description: '慢活系列二人房，設計優雅，氛圍寧靜。'
+  },
+  {
+    id: 'slowlife-202',
+    name: '慢活．202四人房',
+    type: '四人房',
+    capacity: 4,
+    image: '/rooms/slowlife-202.jpg',
+    features: ['雙人床 + 沙發床', '獨立衛浴', '空調設備', '免費WiFi', '盥洗用品'],
+    description: '慢活系列四人房，完美融合舒適與美學。'
+  },
+  {
+    id: 'slowlife-301',
+    name: '慢活．301二人房',
+    type: '二人房',
+    capacity: 2,
+    image: '/rooms/slowlife-301.jpg',
+    features: ['舒適雙人床', '獨立衛浴', '空調設備', '免費WiFi', '盥洗用品'],
+    description: '三樓慢活二人房，享受寧靜的度假時光。'
+  }
+];
+---
+
+<Layout title="客房介紹 - 澎湖慢活．角落民宿">
+  <!-- Hero Section -->
+  <section class="gradient-luxury text-white py-16 texture-bg-dark">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">客房介紹</h1>
+      <p class="text-xl text-white/90">舒適優雅的住宿空間，讓您享受最放鬆的澎湖假期</p>
+    </div>
+  </section>
+
+  <!-- Rooms Section -->
+  <section class="py-16 section-bg-1 texture-bg">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-8">
+        {rooms.map((room) => (
+          <div class="card-luxury overflow-hidden">
+            <!-- Room Image -->
+            <div class="h-64 relative overflow-hidden">
+              <img 
+                src={room.image} 
+                alt={room.name}
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                loading="lazy"
+                onerror="this.onerror=null; this.parentElement.innerHTML='<div class=&quot;h-64 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center&quot;><div class=&quot;text-center&quot;><div class=&quot;w-16 h-16 gradient-luxury rounded-full flex items-center justify-center mx-auto mb-4 shadow-luxury&quot;><svg class=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z&quot;></path><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M8 21l4-4 4 4M8 3l4 4 4-4&quot;></path></svg></div><p class=&quot;text-primary-600 font-semibold&quot;>客房照片</p></div></div>'"
+              />
+              <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
+            </div>
+
+            <!-- Room Info -->
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold text-gray-800 mb-2">{room.name}</h3>
+                  <div class="flex items-center space-x-4">
+                    <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                      {room.type}
+                    </span>
+                    <span class="text-gray-600 flex items-center">
+                      <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                      </svg>
+                      最多 {room.capacity} 人
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="text-gray-600 mb-4">{room.description}</p>
+
+              <!-- Features -->
+              <div class="mb-6">
+                <h4 class="font-semibold text-gray-800 mb-3">房間設施</h4>
+                <div class="grid grid-cols-2 gap-2">
+                  {room.features.map((feature) => (
+                    <div class="flex items-center text-sm text-gray-600">
+                      <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                      </svg>
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <!-- CTA Button -->
+              <div class="pt-4 border-t border-gray-200">
+                <a href="/contact" 
+                   class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block">
+                  立即預訂
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Info Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-6 text-gray-800">房間服務</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">加床服務</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              提供加床服務，不另提供床墊，依房間內的沙發床為主。
+            </p>
+            <p class="text-blue-600 font-semibold">
+              加床服務 NT$500/人 (提供備品及早餐)
+            </p>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+                <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">包棟服務</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              提供包棟優惠方案，適合大家庭或團體出遊。
+            </p>
+            <p class="text-blue-600 font-semibold">
+              包棟優惠中，請來電洽詢
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 bg-blue-50 p-8 rounded-xl">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">所有房型均包含</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h4 class="font-semibold text-gray-800 mb-2">精緻早餐</h4>
+              <p class="text-gray-600 text-sm">住宿均附精緻早餐</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
+                </svg>
+              </div>
+              <h4 class="font-semibold text-gray-800 mb-2">免費WiFi</h4>
+              <p class="text-gray-600 text-sm">全館無線網路覆蓋</p>
+            </div>
+            
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path>
+                </svg>
+              </div>
+              <h4 class="font-semibold text-gray-800 mb-2">完整設備</h4>
+              <p class="text-gray-600 text-sm">空調、冰箱、盥洗用品</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">預訂您的完美客房</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        每個房間都精心設計，為您提供最舒適的住宿體驗
+      </p>
+      <a href="/contact" 
+         class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">
+        立即預訂
+      </a>
+    </div>
+  </section>
+</Layout> 

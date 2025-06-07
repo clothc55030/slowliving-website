@@ -1,48 +1,85 @@
-# Astro Starter Kit: Basics
+# 澎湖慢活．角落民宿官網
 
-```sh
-npm create astro@latest -- --template basics
+這是一個使用 Astro + Tailwind CSS 建立的響應式民宿官網。
+
+## 功能特色
+
+- 🏠 **首頁** - 民宿介紹與設施展示
+- 🛏️ **客房介紹** - 詳細房型資訊
+- 📋 **入住資訊** - 預訂流程與住宿須知
+- 📰 **最新消息** - 優惠活動與重要公告
+- 📍 **位置指引** - 交通指南與地理位置
+- 📞 **聯絡我們** - 聯絡資訊與預訂表單
+
+## 技術架構
+
+- **框架**: Astro 5.x
+- **樣式**: Tailwind CSS 4.x
+- **字體**: Noto Sans TC (Google Fonts)
+- **響應式設計**: 完全支援桌面、平板、手機
+
+## 專案指令
+
+所有指令都需要在專案根目錄執行：
+
+| 指令              | 說明                                    |
+| :---------------- | :-------------------------------------- |
+| `npm install`     | 安裝相依套件                           |
+| `npm run dev`     | 啟動開發伺服器 (`localhost:4321`)      |
+| `npm run build`   | 建置正式版本到 `./dist/` 目錄          |
+| `npm run preview` | 預覽建置結果                           |
+
+## 專案結構
+
+```
+src/
+├── layouts/
+│   └── Layout.astro     # 主要版面配置
+├── pages/
+│   ├── index.astro      # 首頁
+│   ├── rooms.astro      # 客房介紹
+│   ├── checkin.astro    # 入住資訊
+│   ├── news.astro       # 最新消息
+│   ├── location.astro   # 位置指引
+│   └── contact.astro    # 聯絡我們
+└── styles/
+    └── global.css       # 全域樣式
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 民宿資訊
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **名稱**: 澎湖慢活．角落民宿
+- **地址**: 澎湖縣馬公市西衛里223之2
+- **電話**: 0988-089913 / 06-9269509
+- **Email**: f100.adali@gmail.com
+- **LINE ID**: corner913
+- **合法民宿編號**: NO.446
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 開發說明
 
-## 🚀 Project Structure
+這個網站完全響應式設計，支援各種裝置螢幕尺寸。使用 Tailwind CSS 進行樣式設計，確保快速載入與優秀的使用者體驗。
 
-Inside of your Astro project, you'll see the following folders and files:
+所有內容都依據提供的民宿資料進行設計，包含完整的房型介紹、入住須知、預訂流程等資訊。
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+## 啟動方式
+
+1. 安裝相依套件：
+```bash
+npm install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+2. 啟動開發伺服器：
+```bash
+npm run dev
+```
 
-## 🧞 Commands
+3. 開啟瀏覽器瀏覽 `http://localhost:4321`
 
-All commands are run from the root of the project, from a terminal:
+## 建置部署
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+建置正式版本：
+```bash
+npm run build
+```
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+產生的檔案會在 `dist/` 目錄中，可直接部署到任何靜態網站服務。
