@@ -31,7 +31,7 @@ jobs:
         uses: actions/configure-pages@v5
         
       - name: Install, build, and upload your site
-        uses: withastro/action@v2
+        uses: withastro/action@v3
         with:
           path: . # 專案在存储库根目錄的位置（可選）
           node-version: 20 # 用於構建網站的特定版本的Node.js，默認為lts/*
