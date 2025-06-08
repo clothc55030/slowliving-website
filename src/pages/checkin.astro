@@ -8,10 +8,10 @@ const basePath = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
 
 <Layout title="入住資訊 - 澎湖慢活．角落民宿">
   <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+  <section class="gradient-luxury text-white py-16 texture-bg-dark">
     <div class="container mx-auto px-4 text-center">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">入住資訊</h1>
-      <p class="text-xl">預訂流程、入住須知及相關注意事項</p>
+      <p class="text-xl text-white/90">預訂流程、入住須知及相關注意事項</p>
     </div>
   </section>
 
@@ -303,19 +303,19 @@ const basePath = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
   </section>
 
   <!-- Contact CTA -->
-  <section class="py-16 bg-blue-600 text-white">
+  <section class="py-16 gradient-luxury text-white texture-bg-dark">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">準備預訂您的澎湖假期？</h2>
-      <p class="text-xl mb-8 max-w-2xl mx-auto">
+      <p class="text-xl mb-8 max-w-2xl mx-auto text-white/90">
         如有任何疑問或需要進一步洽詢，歡迎隨時與我們聯繫
       </p>
       <div class="flex flex-col md:flex-row gap-4 justify-center">
         <a href="tel:0988089913" 
-           class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+           class="btn-luxury-outline">
           立即致電：0988-089913
         </a>
         <a href={`${basePath}contact`}
-           class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+           class="btn-luxury-outline">
           聯絡我們
         </a>
       </div>
